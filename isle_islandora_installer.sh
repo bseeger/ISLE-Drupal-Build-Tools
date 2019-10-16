@@ -8,12 +8,6 @@
 # Thank you, @McFateM!
 #
 
-echo "Making sure the /var/www/html directory exists"
-if [[ ! -r "/var/www/html" ]]; then
-  echo "HTML directory is not writeable. Check bind mount setup before continuing"
-  exit
-fi
-
 echo "Using Drush makefile to create sample Drupal site within /tmp/drupal_install"
 drush make --prepare-install /utility-scripts/isle_drupal_build_tools/isle-drush_make/drupal.drush.make /tmp/drupal_install
 
